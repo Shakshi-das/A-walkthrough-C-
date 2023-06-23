@@ -1,1 +1,60 @@
 
+#include <iostream>
+using namespace std;
+
+class metres;
+class Distance
+{
+	float feet;
+	float inches;
+	int n;
+	public:
+		Distance();
+		Distance(int);
+		Distance(float);
+		Distance(float,float);
+		float getfeet();
+		float getinches();
+		friend class metres;
+		friend ostream& operator<<(ostream& out,Distance& ob);
+		friend istream& operator>>(istream& in,Distance& ob);
+		Distance(Distance& ob);
+    Distance(metres& ob);
+		void input();
+		void display();
+		Distance operator*(Distance ob);
+		Distance operator+(Distance ob);
+    friend void operator<(Distance& ob,metres& ob1);
+		friend void operator>(Distance& ob, metres& ob1);
+		friend void operator!=(Distance& ob, metres& ob1);
+};
+
+ostream& operator<<(ostream& out,Distance& ob)
+{
+	out<<"Feets are: "<<ob.feet<<" inches are: "<<ob.inches<<endl;
+	return out;
+}
+istream& operator>>(istream& in,Distance& ob)
+{
+	in>>ob.feet;
+	in>>ob.inches;
+	return in;
+}
+Distance::Distance()
+{
+	feet = 0.0;
+	inches = 0.0;
+}
+Distance::Distance(int x)
+{
+	n = x;
+}
+Distance::Distance(float y)
+{
+	feet = y;
+}
+Distance::Distance(float x, float y)
+{
+	inches = x;
+	feet = y;
+}
