@@ -108,3 +108,92 @@ class metres
 		friend ostream& operator<<(ostream& out,metres& ob);
 		friend istream& operator>>(istream& in,metres& ob);
 		friend class Distance;
+                metres(Distance& ob);
+		friend void operator<(Distance& ob,metres& ob1);
+		friend void operator>(Distance& ob, metres& ob1);
+		friend void operator!=(Distance& ob, metres& ob1);
+};
+
+metres::metres()
+{
+	m = 0.0;
+	cm = 0.0;
+}
+metres::metres(float a,float b)
+{
+	m = a;
+	cm = b;
+}
+ostream& operator<<(ostream& out,metres& ob)
+{
+	out<<"metres are: "<<ob.m<<" centimetres are: "<<ob.cm<<endl;
+	return out;
+}
+istream& operator>>(istream& in,metres& ob)
+{
+	in>>ob.m;
+	in>>ob.cm;
+	return in;
+}
+void metres ::input()
+{
+	cout<<"Enter the meter and centimeter"<<endl;
+	cin>>(*this);
+}
+int metres::getm()
+{
+	return m;
+}
+int metres::getcm()
+{
+	return cm;
+}
+void metres::display()
+{
+	cout<<(*this);
+}
+
+metres::metres(Distance& ob)
+{
+	m = ob.getfeet()*0.305;
+	cm = ob.getinches()*0.0254;
+}
+Distance::Distance(metres& ob)
+{
+	inches = ob.getcm()/0.0254;
+	feet = ob.getm()/0.305;
+}
+void operator<(Distance& ob,metres& ob1)
+{
+	if(ob.getinches() < ob1.getm())
+		cout<<"True"<<endl;
+	else
+		cout<<"False"<<endl;
+	if(ob.getfeet() < ob1.getcm())
+		cout<<"True"<<endl;
+	else
+		cout<<"False"<<endl;
+}
+void operator>(Distance& ob,metres& ob1)
+{
+	if(ob.getinches() > ob1.getm())
+		cout<<"True"<<endl;
+	else
+		cout<<"False"<<endl;
+	if(ob.getfeet() > ob1.getcm())
+		cout<<"True"<<endl;
+	else
+		cout<<"False"<<endl;
+}
+void operator!=(Distance& ob,metres& ob1)
+{
+	if(ob.getinches() != ob1.getm())
+		cout<<"True"<<endl;
+	else
+		cout<<"False"<<endl;
+	if(ob.getfeet() != ob1.getcm())
+		cout<<"True"<<endl;
+	else
+		cout<<"False"<<endl;
+}
+
