@@ -197,3 +197,25 @@ void operator!=(Distance& ob,metres& ob1)
 		cout<<"False"<<endl;
 }
 
+int main()
+{
+	Distance ob;
+	ob.input();
+	metres ob1;
+	ob1.input();
+	metres res = metres(ob);
+	res.display();
+	//Distance ob1;
+	//ob>ob1;
+    //ob!=ob1;
+	//Distance ob, ob1,ob2,ob3,ob4;
+	//ob1.input();
+	//ob = ob*ob1;
+	//ob.display();
+	//ob2.input();
+	//ob3 = ob3*ob2;//ob3 = ob3.operator*(ob2)
+	//ob3.display();
+	//ob4 = ob + ob3;
+	//ob4.display();
+	return 0;
+}
