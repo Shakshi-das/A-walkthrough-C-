@@ -1,0 +1,41 @@
+//program to display salaries of different employees in an education system
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+class Staff
+{
+	public:string name;int code;
+	public:
+	Staff()
+	{
+	}
+	Staff(string s,int c)
+	{
+	 name=s;
+	 code=c;
+	}
+	virtual void sal()=0;
+};
+
+class Officer:public Staff
+{
+	public:int grade, salary;
+	public:
+	Officer()
+	{
+	}
+	Officer(string s,int c,int g):Staff(s,c)
+	{
+	 grade=g;
+	}
+	void sal()
+	{	salary=5200;
+	}
+	void display()
+	{
+	cout<<" name = "<<name<<" code = "<<code<<" salary "<<salary;
+	cout<<" grade = "<<grade;
+	}
+	
+};
