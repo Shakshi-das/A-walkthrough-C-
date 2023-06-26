@@ -120,3 +120,62 @@ class regular_typist:public Typist
 	cout<<" remuneration = "<<remuneration;
 	}
 };
+
+int main()
+{	
+	int choice,c; string s;
+	cout<<" enter name ";
+	cin>>s;
+	cout<<" enter code ";
+	cin>>c;
+	cout<<" enter 1 for officer , 2 for teacher and 3 for typist ";
+	cin>>choice;
+	if(choice==1)
+	{	int gr;
+		cout<<" enter grade ";
+		cin>>gr;
+		Officer obj1(s,c,gr);
+		obj1.sal();
+		obj1.display();
+	}
+	else if(choice==2)
+	{
+		string sub;
+		cout<<" enter subject ";
+                cin>>sub;
+		Teacher obj2(s,c,sub);
+		obj2.sal();
+		obj2.display();
+	}
+	else if(choice==3)
+	{	int t,sp;
+		cout<<" enter speed ";
+		cin>>sp;
+		cout<<" enter 1 for casual regular and 2 for regular regular ";
+		cin>>t;
+		if(t==1)
+		{
+			int dw;
+			cout<<" enter daily wages ";
+			cin>>dw;
+                        casual_typist obj3(s,c,sp,dw);
+			obj3.sal();
+			obj3.display();
+		}
+		else
+		{
+			int dw;
+			cout<<" enter remuneration ";
+			cin>>dw;
+			regular_typist obj4(s,c,sp,dw);
+			obj4.sal();
+			obj4.display();
+		
+		}
+	}
+	else
+	{
+	 cout<<" invalid choice ";
+	}
+return 0;
+}
