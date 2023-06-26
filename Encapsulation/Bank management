@@ -1,1 +1,27 @@
 //program to design a bank management system
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class account
+{
+    string name;
+    int acc;
+    string bankname;
+    int balance;
+    int merge;
+
+    public:
+        account();
+        account(string , int ,string, int);
+        void input();
+        void withdraw();
+        void interest();
+        void penalty();
+        void display();
+        void display1();
+        
+        account operator+(account ob);
+};
+
