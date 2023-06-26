@@ -39,3 +39,84 @@ class Officer:public Staff
 	}
 	
 };
+
+class Teacher:public Staff
+{
+	public:string subject;int salary;
+	public:
+	Teacher()
+	{
+	}
+	Teacher(string s,int c,string sub):Staff(s,c)
+	{
+	 subject=sub;
+	}
+	void sal()
+	{	salary=6000;
+	}
+	void display()
+	{
+	cout<<" name = "<<name<<" code = "<<code<<" salary "<<salary;
+	cout<<" subject = "<<subject;
+	}
+};
+
+class Typist:virtual public Staff
+{
+	public: int speed;
+	public:
+	Typist()
+	{
+	}
+	Typist(string s,int c,int sp):Staff(s,c)
+	{
+	 speed=sp;
+	}
+	void display()
+	{
+	cout<<" name = "<<name<<" code = "<<code;
+	}
+};
+
+class casual_typist:public Typist
+{
+	public:int daily_wages, salary;
+	public:
+	casual_typist()
+	{
+	}
+	casual_typist(string s,int c,int sp,int d):Typist(s,c,sp)
+	{
+	 daily_wages=d;
+	}
+	void sal()
+	{	salary=2400;
+	}
+	void display()
+	{
+	cout<<" name = "<<name<<" code = "<<code<<" speed = "<<speed<<" salary "<<salary;
+	cout<<" daily_wages = "<<daily_wages;
+	}
+};
+
+class regular_typist:public Typist
+{
+	public:int remuneration,salary;
+	
+	public:
+	regular_typist()
+	{
+	}
+	regular_typist(string s,int c,int sp,int r):Typist(s,c,sp)
+	{
+	 remuneration=r;
+	}
+	void sal()
+	{	salary=3400;
+	}
+	void display()
+	{Typist::display();
+	cout<<" speed = "<<speed<<" salary "<<salary;
+	cout<<" remuneration = "<<remuneration;
+	}
+};
