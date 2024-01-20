@@ -1,3 +1,4 @@
+//program to convert characters of a string to uppercase
 #include <iostream> // Including input-output stream header file
 #include <algorithm> // Including algorithm header for transform function
 using namespace std; // Using the standard namespace
