@@ -1,5 +1,4 @@
-// program to Merge an array of  
-// size n into another array of size m + n 
+// program to Merge an array of size n into another array of size m + n 
 #include <bits/stdc++.h> 
 using namespace std; 
   
