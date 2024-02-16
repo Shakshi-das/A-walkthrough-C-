@@ -1,13 +1,16 @@
 // program to Merge an array of size n into another array of size m + n 
+
 #include <bits/stdc++.h> 
 using namespace std; 
   
 /* Assuming -1 is filled for the places 
    where element is not available */
+
 #define NA -1 
   
 /* Function to move m elements at  
    the end of array mPlusN[] */
+
 void moveToEnd(int mPlusN[], int size) 
 { 
    int j = size - 1; 
@@ -21,6 +24,7 @@ void moveToEnd(int mPlusN[], int size)
   
 /* Merges array N[] of size n into 
    array mPlusN[] of size m+n*/
+
 void merge(int mPlusN[], int N[], int m, int n) 
 { 
    int i = n; /* Current index of i/p part of mPlusN[]*/
@@ -48,6 +52,7 @@ void merge(int mPlusN[], int N[], int m, int n)
 } 
   
 /* Utility that prints out an array on a line */
+
 void printArray(int arr[], int size) 
 { 
    for (int i = 0; i < size; i++) 
@@ -57,6 +62,7 @@ void printArray(int arr[], int size)
 } 
   
 /* Driver code */
+
 int main() 
 { 
    /* Initialize arrays */
