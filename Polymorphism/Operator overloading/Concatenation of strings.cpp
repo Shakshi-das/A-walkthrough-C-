@@ -9,23 +9,16 @@ class Strings
 {
 
     char *s;
-
     int l;
 
 public:
 
     Strings();
-
     Strings(int i);
-
     Strings(string st);
-
     Strings(const Strings &ob);
-
     Strings operator+(Strings &ob);
-
     void input();
-
     void display();
 
 };
@@ -35,7 +28,6 @@ Strings::Strings()
 {
 
     l = 100;
-
     s = new char[100];
 
 }
@@ -45,11 +37,8 @@ Strings::Strings(int i)
 {
 
     int j = 0;
-
     string str = to_string(i);
-
     l = str.length();
-
     s = new char[l];
 
     while (j < l)
@@ -57,7 +46,6 @@ Strings::Strings(int i)
     {
 
         s[j] = str[j];
-
         j++;
 
     }
@@ -69,9 +57,7 @@ Strings::Strings(string st)
 {
 
     int i = 0;
-
     l = st.length();
-
     s = new char[st.length()];
 
     while (i < st.length())
@@ -79,7 +65,6 @@ Strings::Strings(string st)
     {
 
         s[i] = st[i];
-
         i++;
 
     }
@@ -105,9 +90,7 @@ Strings Strings::operator+(Strings &ob)
     Strings res;
 
     res.l = l + ob.l;
-
     int i = 0;
-
     int j = 0;
 
     while (i < l)
@@ -115,7 +98,6 @@ Strings Strings::operator+(Strings &ob)
     {
 
         res.s[i] = s[i];
-
         i++;
 
     }
@@ -125,9 +107,7 @@ Strings Strings::operator+(Strings &ob)
     {
 
         res.s[i] = ob.s[j];
-
         i++;
-
         j++;
 
     }
@@ -141,7 +121,6 @@ void Strings::input()
 {
 
     cin >> l;
-
     cin >> s;
 
 }
@@ -157,7 +136,6 @@ void Strings::display()
     {
 
         cout << s[i];
-
         i++;
 
     }
@@ -170,39 +148,22 @@ int main()
 {
 
     // Strings a,b;
-
     // a.input();
-
     // b.input();
-
     // Strings c;
-
     // c=a+b;
-
     // c.display();
 
     cout << "Enter a string";
-
     string str;
-
     cin >> str;
-
     Strings ob = str;
-
     // ob.display();
-
     int p;
-
     cout << "Enter a no.";
-
     cin >> p;
-
     Strings ob1 = p;
-
     // ob1.display();
-
     Strings res = ob + ob1;
-
     res.display();
-
 }
