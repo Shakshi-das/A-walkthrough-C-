@@ -12,23 +12,14 @@ class Complex
     public:
 
         Complex();
-
         Complex(int,int);
-
         void input();
-
         Complex operator+(Complex&);
-
         Complex operator-(Complex&);
-
         Complex operator*(Complex&);
-
         int operator==(Complex&);
-
         friend ostream& operator<<(ostream&,const Complex);
-
         friend istream& operator>>(istream&,Complex&);
-
         void display();
 
 };
@@ -38,7 +29,6 @@ Complex::Complex()
 {
 
     real = 0;
-
     img = 0;
 
 }
@@ -48,7 +38,6 @@ Complex::Complex(int a,int b)
 {
 
     real = a;
-
     img = b;
 
 }
@@ -66,9 +55,7 @@ ostream& operator<<(ostream& out,const Complex ob)
 {
 
     out<<"The complex number is:"<<endl;
-
     out<<ob.real<<"+i"<<ob.img<<endl;
-
     return out;
 
 }
@@ -78,7 +65,6 @@ istream& operator>>(istream& in, Complex& ob)
 {
 
     in>>ob.real>>ob.img;
-
     return in;
 
 }
@@ -96,11 +82,8 @@ Complex Complex::operator+(Complex& ob)
 {
 
     Complex res;
-
     res.img = this->img + ob.img;
-
     res.real = this->real + ob.real;
-
     return res;
 
 }
@@ -110,11 +93,8 @@ Complex Complex::operator-(Complex& ob)
 {
 
     Complex res;
-
     res.real = this->real - ob.real;
-
     res.img = this->img - ob.img;
-
     return res;
 
 }
@@ -124,11 +104,8 @@ Complex Complex::operator*(Complex& ob)
 {
 
     Complex res;
-
     res.real = this->real*ob.real - this->img*ob.img;
-
     res.img = this->real*ob.img + this->img*ob.real;
-
     return res;
 
 }
@@ -152,13 +129,9 @@ int main()
 {
 
     Complex ob;
-
     Complex ob1;
-
     cout<<"Enter real and imaginary "<<endl;
-
     ob.input();
-
     cout<<"Enter real and imaginary "<<endl;
 
     ob1.input();
