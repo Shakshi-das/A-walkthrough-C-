@@ -115,11 +115,9 @@ int Complex::operator==(Complex& ob)
 {
 
     if(this->img == ob.img && this->real == ob.real)
-
         return 1;
 
     else 
-
         return 0;
 
 }
@@ -133,29 +131,19 @@ int main()
     cout<<"Enter real and imaginary "<<endl;
     ob.input();
     cout<<"Enter real and imaginary "<<endl;
-
     ob1.input();
-
     Complex res1,res2,res3;
-
     res1 = ob + ob1;
-
     res2 = ob - ob1;
-
     res3 = ob * ob1;
-
     res1.display();
-
     res2.display();
-
     res3.display();
 
     if(ob == ob1)
-
         cout<<"Equal"<<endl;
 
     else
-
         cout<<"Not equal"<<endl;
 
     return 0;
