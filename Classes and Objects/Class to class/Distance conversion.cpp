@@ -206,9 +206,10 @@ int main()
 	ob1.input();
 	metres res = metres(ob);
 	res.display();
+	
 	//Distance ob1;
 	//ob>ob1;
-    //ob!=ob1;
+        //ob!=ob1;
 	//Distance ob, ob1,ob2,ob3,ob4;
 	//ob1.input();
 	//ob = ob*ob1;
@@ -218,5 +219,6 @@ int main()
 	//ob3.display();
 	//ob4 = ob + ob3;
 	//ob4.display();
+	
 	return 0;
 }
