@@ -17,6 +17,7 @@ class fractions
         void display();
         void minimise();
 };
+
 fractions::fractions()
 {
     numerator = 0;
@@ -88,13 +89,16 @@ int main()
 {
     fractions ob1;
     // fractions ob2;
+    
     ob1.input();
+    
     // ob2.input();
     // fractions ob3 = ob1 + ob2;
     // ob3.display();
     // fractions ob4 = ob1 - ob2;
     // ob4.display();
     // ob1 == ob2;
+    
     ob1.minimise();
     ob1.display();
 
