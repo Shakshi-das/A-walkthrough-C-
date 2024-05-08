@@ -11,6 +11,7 @@ int main(){
     cout<<"Enter a Word : ";
     cin>>input;
     int len = input.length();
+    
     for (i = 0; i < len; i++){
         for (j = 0; j < len - 1; j++){
             if (input[j] > input[j + 1]){
@@ -21,4 +22,5 @@ int main(){
         }
     }
     cout<<input;
+    
 }
