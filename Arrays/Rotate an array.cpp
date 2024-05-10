@@ -13,13 +13,11 @@ void RightRotate(int a[], int n, int k)
     for(int i = 0; i < n; i++)
     {
        if(i < k)
-       {
-           
+       {        
            cout << a[n + i - k] << " ";
        }
        else
-       {
-           
+       {        
            cout << (a[i - k]) << " ";
        }
     }
